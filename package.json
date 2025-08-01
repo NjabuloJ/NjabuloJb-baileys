@@ -1,12 +1,12 @@
 {
-  "name": "TREND-X",
+  "name": "NjabuloJb-baileys",
   "version": "3.0.0",
-  "description": "A WhatsApp Bot Created By trendex",
+  "description": "A WhatsApp Bot Created By NjabuloJb-baileys",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name TREND-X",
-    "stop": "pm2 stop TREND-X",
-    "restart": "pm2 restart TREND-X"
+    "start": "pm2 start index.js --deep-monitoring --attach --name NjabuloJb-baileys",
+    "stop": "pm2 stop NjabuloJb-baileys",
+    "restart": "pm2 restart NjabuloJb-baileys"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.18",
