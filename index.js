@@ -106,37 +106,23 @@ async function connectToWA() {
       auth: state,
       version
     })
-
-    conn.ev.on('connection.update', async (update) => {
-      const { connection, lastDisconnect, qr } = update
-
-      if (qr) {
-        console.log('[ 📱 ] QR Code generated. Please scan with WhatsApp.')
-        qrcode.generate(qr, { small: true })
-      }
-
-      if (connection === 'close') {
-        const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut
-        console.log('[ ⚠️ ] Connection closed:', lastDisconnect?.error?.output?.statusCode)
-        
-        if (shouldReconnect) {
-          console.log('[ ♻️ ] Attempting to reconnect...')
-          setTimeout(() => connectToWA(), 5000)
-        } else {
-          console.log('[ ❌ ] Logged out. Please update your SESSION_ID')
-        }
-      } else if (connection === 'open') {
-        try {
-          console.log('[ 🧬 ] Installing Plugins')
-
-          fs.readdirSync("./plugins/").forEach((plugin) => {
-            if (path.extname(plugin).toLowerCase() === ".js") {
-              require("./plugins/" + plugin)
-            }
-          })
-
-          console.log('[ ✔ ] Plugins installed successfully ✅')
-          console.log('[ 🪀 ] Bot connected to WhatsApp 📲')
+    
+  conn.ev.on('connection.update', (update) => {
+  const { connection, lastDisconnect } = update
+  if (connection === 'close') {
+  if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+  connectToWA()
+  }
+  } else if (connection === 'open') {
+  console.log('🧬 Installing Plugins')
+  const path = require('path');
+  fs.readdirSync("./plugins/").forEach((plugin) => {
+  if (path.extname(plugin).toLowerCase() == ".js") {
+  require("./plugins/" + plugin);
+  }
+  });
+  console.log('Plugins installed successful ✅')
+  console.log('Bot connected to whatsapp ✅')
 
           let up = `Njabulo jb coming soon`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/ncd73l.jpeg` }, caption: up })
