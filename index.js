@@ -138,19 +138,8 @@ async function connectToWA() {
           console.log('[ ✔ ] Plugins installed successfully ✅')
           console.log('[ 🪀 ] Bot connected to WhatsApp 📲')
 
-          let up = `*Hᴇʟʟᴏ ᴛʜᴇʀᴇ 『TREND-X』 ᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
-
-*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ 『TREND-X』🚩* 
-
-
-- *ʏᴏᴜʀ ʙᴏᴛ ᴘʀᴇғɪx: ➡️[ . ]*
-> - ʏᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ᴜʀ ᴘʀᴇғɪx ᴜsɪɴɢ ᴛʜᴇ .ᴘʀᴇғɪx ᴄᴏᴍᴍᴀɴᴅ
-
-> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, sᴛᴀʀ & ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ ⬇️ 
-https://github.com/trendex2030/TREND-X
-
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ TRENDEX`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/adymbp.jpg` }, caption: up })
+          let up = `Njabulo jb coming soon`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/ncd73l.jpeg` }, caption: up })
 
           const channelJid = "120363400575205721@newsletter"
           try {
@@ -822,7 +811,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   }
   
   app.get("/", (req, res) => {
-  res.send("『TREND-X』 STARTED ✅");
+  res.send("『Njabulo Jb』 STARTED ✅");
   });
   app.listen(port, '0.0.0.0', () => console.log(`Server listening on port http://0.0.0.0:${port}`));
   setTimeout(() => {
