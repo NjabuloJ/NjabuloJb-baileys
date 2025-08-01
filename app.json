@@ -1,8 +1,8 @@
 {
-  "name": "TREND-X",
-  "description": "Javascript WhatsApp bot made by TRENDEX",
+  "name": "Njabulo Jb",
+  "description": "Javascript WhatsApp bot made by Njabulo Jb",
   "logo": "https://files.catbox.moe/adymbp.jpg",
-  "keywords": ["TREND-X"],
+  "keywords": ["NjabuloJb-baileys"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "TREND-X"
+      "value": "NjabuloJb-baileys"
     }, 
       
     "PREFIX": {
